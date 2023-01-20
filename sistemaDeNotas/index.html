@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema de notas</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+    
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(68, 113, 0);
+    }
+
+    .container {
+        height: 120vh;
+        width: 50%;
+
+        background-color: green;
+        color: white;
+        font-family: 'Ubuntu', sans-serif;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Studanty {
+        border: 3px solid white;
+        border-radius: 10px;
+        height: 500px;
+        width: 500px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        margin-top: 30px;
+    }
+
+    .input {
+        width: 400px;
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+    }
+
+    .input:focus, .input:hover {
+        outline: 0;
+        background: rgba(255, 166, 0, 0.786);
+    }
+
+    #button {
+        border-radius: 10px;
+        height: 40px;
+        width: 100px;
+        border: none;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    #button:hover {
+        background: rgba(255, 166, 0, 0.786);
+        color: white;
+        transform: translateX(2px) translateY(2px);
+        transition: 0.2s;
+    }
+
+    .calculator {
+        border: 3px solid white;
+        border-radius: 10px;
+        height: 500px;
+        width: 500px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        margin-top: 30px;
+    }
+
+    #schoolReport {
+        border: 3px solid white;
+        border-radius: 10px;
+        height: 1300px;
+        width: 500px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        margin-top: 30px;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Bem vindo ao sistema de notas</h1>
+            <h2>Preencha abaixo com seus dados</h2>
+        </div>
+
+        <div class="Studanty">
+            <input type="text" name="firstName" id="nameOne" placeholder="Primeiro nome" class="input">
+            <input type="text" name="lastName" id="nameTwo" placeholder="Segundo nome" class="input">
+            <input type="text" name="current" id="currentStudanty" placeholder="Curso" class="input">
+        </div>
+
+        <div class="calculator">
+            <h3>Cacule sua média</h3>
+            <input type="number" name="nota1" id="number1" placeholder="primeiro perído">
+            <input type="number" name="nota2" id="number2" placeholder="segundo período">
+            <input type="number" name="nota3" id="number3" placeholder="terceiro período">
+            <input type="number" name="nota4" id="number4" placeholder="quarto período">
+            <input type="button" value="enviar e calcular" id="button" onclick="calcular()">
+        </div>
+
+        <div id="schoolReport">
+            <div id="dadosStudanty">
+                <div id="nome">Nome:</div>
+                <div id="curso">Curso:</div>
+            </div>
+            <div id="notasStudanty">
+                <div>Primeiro período:</div>
+                <div>Segundo período:</div>
+                <div>Terceiro período:</div>
+                <div>Quarto período:</div>
+            </div>
+            <div id="situacao"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
